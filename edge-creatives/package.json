@@ -1,0 +1,47 @@
+{
+  "name": "edge-creatives",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.0",
+    "@sanity/client": "^7.21.0",
+    "@sanity/image-url": "^2.1.1",
+    "@studio-freight/lenis": "^1.0.42",
+    "@t3-oss/env-nextjs": "^0.13.11",
+    "@theatre/core": "^0.7.2",
+    "@theatre/r3f": "^0.7.2",
+    "@theatre/studio": "^0.7.2",
+    "clsx": "^2.1.1",
+    "gsap": "^3.15.0",
+    "motion": "^12.38.0",
+    "next": "16.2.3",
+    "next-sanity": "^12.2.2",
+    "next-themes": "^0.4.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "styled-components": "^6.4.0",
+    "tailwind-merge": "^3.5.0",
+    "three": "^0.183.2",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.183.1",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.3",
+    "sanity": "^5.20.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
