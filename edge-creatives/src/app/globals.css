@@ -6,27 +6,13 @@
   --color-brand-accent: #E8593C;
   --color-brand-muted: #9A9A96;
 
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  
-  --font-display: var(--font-display);
-  --font-body: var(--font-body);
-}
-
-:root {
-  --background: var(--color-brand-white);
-  --foreground: var(--color-brand-black);
-}
-
-.dark {
-  --background: var(--color-brand-black);
-  --foreground: var(--color-brand-white);
+  --font-sans: var(--font-hostgrotesk);
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-body), sans-serif;
+  background-color: #F5F5F3;
+  color: #0A0A0A;
+  font-family: var(--font-hostgrotesk), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
