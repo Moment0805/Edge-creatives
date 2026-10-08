@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import { ThemeProvider } from '@/components/ui/ThemeProvider'
+import { env } from '@/env'
 
 const hostGrotesk = localFont({
   src: [

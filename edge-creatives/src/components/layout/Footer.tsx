@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { env } from '@/env'
 
 function InstagramIcon() {
   return (
@@ -38,10 +39,10 @@ function TikTokIcon() {
 }
 
 const socialLinks = [
-  { icon: <InstagramIcon />, href: 'https://instagram.com', label: 'Instagram' },
-  { icon: <LinkedInIcon />, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: <TwitterIcon />, href: 'https://twitter.com', label: 'Twitter' },
-  { icon: <TikTokIcon />, href: 'https://tiktok.com', label: 'TikTok' },
+  { icon: <InstagramIcon />, href: env.NEXT_PUBLIC_SOCIAL_INSTAGRAM, label: 'Instagram' },
+  { icon: <LinkedInIcon />, href: env.NEXT_PUBLIC_SOCIAL_LINKEDIN, label: 'LinkedIn' },
+  { icon: <TwitterIcon />, href: env.NEXT_PUBLIC_SOCIAL_TWITTER, label: 'Twitter' },
+  { icon: <TikTokIcon />, href: env.NEXT_PUBLIC_SOCIAL_TIKTOK, label: 'TikTok' },
 ]
 
 export default function Footer() {
@@ -71,10 +72,8 @@ export default function Footer() {
         <div className="flex flex-col gap-3">
           <h4 className="text-white text-[15px] font-medium">Address</h4>
           <div className="flex flex-col gap-1 text-[#9A9A96] text-[13px] leading-relaxed">
-            <span>Edge studio</span>
-            <span>Globe Point, 1 Globe</span>
-            <span>Road Leeds, UK. LS11</span>
-            <span>5FD</span>
+            <span>{env.NEXT_PUBLIC_COMPANY_NAME}</span>
+            <span>{env.NEXT_PUBLIC_COMPANY_ADDRESS}</span>
           </div>
         </div>
 
@@ -82,9 +81,9 @@ export default function Footer() {
         <div className="flex flex-col gap-3">
           <h4 className="text-white text-[15px] font-medium">Terms & Conditions</h4>
           <div className="flex flex-col gap-1.5 text-[13px]">
-            <Link href="#" className="text-[#9A9A96] hover:text-white transition-colors">Download PDF</Link>
-            <Link href="#" className="text-[#9A9A96] hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-[#9A9A96] hover:text-white transition-colors">Cookie Policy</Link>
+            <Link href="/terms" className="text-[#9A9A96] hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="text-[#9A9A96] hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/cookies" className="text-[#9A9A96] hover:text-white transition-colors">Cookie Policy</Link>
           </div>
         </div>
 
@@ -102,8 +101,8 @@ export default function Footer() {
         <div className="flex flex-col gap-3">
           <h4 className="text-white text-[15px] font-medium">Contact</h4>
           <div className="flex flex-col gap-1.5 text-[13px]">
-            <a href="tel:+4401132453500" className="text-[#9A9A96] hover:text-white transition-colors">+44 (0)1132 453500</a>
-            <a href="mailto:chat@edgestudio.com" className="text-[#9A9A96] hover:text-white transition-colors">chat@edgestudio.com</a>
+            <a href={`tel:${env.NEXT_PUBLIC_CONTACT_PHONE}`} className="text-[#9A9A96] hover:text-white transition-colors">{env.NEXT_PUBLIC_CONTACT_PHONE}</a>
+            <a href={`mailto:${env.NEXT_PUBLIC_CONTACT_EMAIL}`} className="text-[#9A9A96] hover:text-white transition-colors">{env.NEXT_PUBLIC_CONTACT_EMAIL}</a>
           </div>
         </div>
 
@@ -111,7 +110,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pt-8">
-        <p className="text-[#9A9A96] text-[13px]">© 2026 Edge studio · All rights reserved.</p>
+        <p className="text-[#9A9A96] text-[13px]">© {new Date().getFullYear()} {env.NEXT_PUBLIC_COMPANY_NAME} · All rights reserved.</p>
 
         {/* Social icon buttons */}
         <div className="flex items-center gap-3">
