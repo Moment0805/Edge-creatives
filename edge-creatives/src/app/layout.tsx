@@ -3,6 +3,8 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { ThemeProvider } from '@/components/ui/ThemeProvider'
 import { env } from '@/env'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const hostGrotesk = localFont({
   src: [
@@ -63,6 +65,8 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} forcedTheme="light">
           {children}
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
