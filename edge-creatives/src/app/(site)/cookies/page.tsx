@@ -19,7 +19,7 @@ export default function CookiesPage() {
           <DownloadPdfButton filename="cookie-policy" targetId="legal-content" />
         </div>
 
-        <div id="legal-content" className="prose prose-lg prose-p:text-gray-600 prose-headings:font-medium prose-headings:text-[#0A0A0A] max-w-none bg-white p-2">
+        <div id="legal-content" className="prose md:prose-lg prose-p:text-gray-600 prose-headings:font-medium prose-headings:text-[#0A0A0A] max-w-none bg-white p-2">
 
           <h2>1. What are cookies?</h2>
           <p>
