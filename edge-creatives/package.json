@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "optimize:svg": "node scripts/optimize-svg.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -46,6 +47,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.3",
     "sanity": "^5.20.0",
+    "svgo": "^4.0.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
