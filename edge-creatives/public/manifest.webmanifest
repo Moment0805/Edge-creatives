@@ -1,0 +1,16 @@
+{
+  "name": "The Edge Creatives",
+  "short_name": "Edge Creatives",
+  "description": "A design studio for ambitious brands. We work remotely at the sweet spot of craft and ideas that move people.",
+  "icons": [
+    {
+      "src": "/logo%20black.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
