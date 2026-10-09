@@ -51,6 +51,13 @@ const hostGrotesk = localFont({
 export const metadata: Metadata = {
   title: 'The Edge Creatives',
   description: 'A design studio for ambitious brands. We work remotely at the sweet spot of craft and ideas that move people.',
+  applicationName: 'The Edge Creatives',
+  icons: {
+    icon: '/logo%20black.svg',
+    shortcut: '/logo%20black.svg',
+    apple: '/logo%20black.svg',
+  },
+  manifest: '/manifest.webmanifest',
 }
 
 export default function RootLayout({
