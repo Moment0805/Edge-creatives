@@ -53,11 +53,17 @@ export const metadata: Metadata = {
   description: 'A design studio for ambitious brands. We work remotely at the sweet spot of craft and ideas that move people.',
   applicationName: 'The Edge Creatives',
   icons: {
-    icon: '/logo%20black.svg',
+    icon: [
+      { url: '/logo%20black.svg', type: 'image/svg+xml' },
+      { url: '/logo%20black.svg', type: 'image/svg+xml' },
+    ],
     shortcut: '/logo%20black.svg',
     apple: '/logo%20black.svg',
   },
   manifest: '/manifest.webmanifest',
+  other: {
+    'theme-color': '#000000',
+  },
 }
 
 export default function RootLayout({
@@ -65,7 +71,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  // Using HostGrotesk for both body and display fonts as per standard HostGrotesk brand application.
   return (
     <html lang="en" suppressHydrationWarning className={`${hostGrotesk.variable}`}>
       <body className="antialiased min-h-screen">
