@@ -54,7 +54,7 @@ export async function POST(req: Request) {
 
     // 4. Send Email
     const { error } = await resend.emails.send({
-      from: 'The Edge Studio <noreply@wearetheedge.studio>',
+      from: 'The Edge Studio <contact@wearetheedge.studio>',
       to: [env.CONTACT_EMAIL],
       subject: `New Contact Form Submission: ${subject}`,
       replyTo: email,
