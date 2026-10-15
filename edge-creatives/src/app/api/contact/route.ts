@@ -54,7 +54,7 @@ export async function POST(req: Request) {
 
     // 4. Send Email
     const { error } = await resend.emails.send({
-      from: 'The Edge Studio <onboarding@resend.dev>', // Use onboarding@resend.dev for testing if domain not verified
+      from: 'The Edge Studio <noreply@wearetheedge.studio>',
       to: [env.CONTACT_EMAIL],
       subject: `New Contact Form Submission: ${subject}`,
       replyTo: email,
@@ -69,7 +69,7 @@ ${message}
     })
 
     if (error) {
-      console.error('Resend error:', error)
+      console.error('Resend error:', JSON.stringify(error))
       return NextResponse.json({ error: 'Failed to send message. Please try again later.' }, { status: 500 })
     }
 
